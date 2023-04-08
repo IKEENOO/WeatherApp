@@ -1,0 +1,125 @@
+@import "./style.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --background: #fff;
+    --country-color: #fff;
+    --country-background: #e5464f;
+    --border: #15263d;
+    --btn-hover: #F2F2F2;
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    height: 100vh;
+}
+body, .header, .form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body, .header, .form, .card {
+    flex-direction: column;
+}
+.header, .card {
+    width: 290px;
+}
+.header, .input, .btn, .card, .card::before, .header::before {
+    border-radius: 10px;
+}
+.header {
+    position: relative;
+    background-color: var(--background);
+    padding: 25px;
+    transition: 0.5s;
+    margin-bottom: 25px;
+}
+.header, .card, .card::before, .header::before {
+    box-shadow: 0px 5px 20px rgba(27, 108, 144, 0.25);
+}
+.title {
+    font-size: 32px;
+    font-weight: 700;
+}
+.input, .btn {
+    border: 1px solid var(--border);
+}
+.input {
+    padding: 10px;
+    margin: 15px;
+    width: 95%;
+    max-width: 250px;
+    height: 35px;
+}
+.btn {
+    min-width: 50px;
+    height: 35px;
+    padding: 8px;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: var(--background);
+    transition: all 0.2s ease-in-out 0ms;
+    margin-bottom: 10px;
+}
+.btn:hover {
+    background-color: var(--btn-hover);
+    box-shadow: 0px 0px 20px -18px;
+}
+.btn:active {
+    transform: scale(0.95);
+}
+.card {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+    background-color: var(--background);
+    display: flex;
+    row-gap: 20px;
+}
+.card::before, .header::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -10px;
+    bottom: 10px;
+    z-index: -1;
+    width: calc(100% + 20px);
+    background-color: var(--background);
+    height: 100%;
+}
+.card__city h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+.card__city span {
+    display: inline-block;
+    color: var(--country-color);
+    padding: 3px 5px;
+    background-color: var(--country-background);
+    border-radius: 60px;
+    font-size: 10px;
+    line-height: 100%;
+    vertical-align: text-top;
+}
+.card__weather {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__value {
+    font-size: 64px;
+    line-height: 1;
+}
+.card__value sup {
+    font-size: 50%;
+}
+.card__image {
+    height: 64px;
+}
+.card__description {
+    font-size: 20px;
+    line-height: 1.2;
+}
