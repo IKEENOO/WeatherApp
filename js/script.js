@@ -1,7 +1,7 @@
 import conditions from './condition.js';
 console.log(conditions);
 
-const apiKey = 'ca5bb123e4124264b06173914230704';
+const apiKey = 'YOUR_API_KEY';
 
 const header = document.querySelector('#header');
 const form = document.querySelector('#form');
